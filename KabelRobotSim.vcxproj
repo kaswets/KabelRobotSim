@@ -23,10 +23,12 @@
     <ClInclude Include="..\..\KabelRobotSim\include\udp_telemetry.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\KabelRobotSim\src\debug_udp_main.cpp" />
+    <ClCompile Include="..\..\KabelRobotSim\src\debug_udp_main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\KabelRobotSim\src\logic.cpp" />
     <ClCompile Include="..\..\KabelRobotSim\src\main.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\KabelRobotSim\src\robot.cpp" />
   </ItemGroup>
@@ -123,12 +125,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\KabelRobotSim\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\KabelRobotSim\include; D:\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\SFML-2.6.2\lib</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>

@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="KabelRobotSim.vcxproj" />
+  <Project Path="KabelRobotSim.vcxproj" Id="34100d29-ee66-43c7-a87b-9acb31fd4417" />
 </Solution>
