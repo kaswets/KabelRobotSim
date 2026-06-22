@@ -19,18 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\KabelRobotSim\include\robot.h" />
-    <ClInclude Include="..\..\KabelRobotSim\include\udp_telemetry.h" />
+    <ClInclude Include="include\robot.h" />
+    <ClInclude Include="include\udp_telemetry.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\KabelRobotSim\src\debug_udp_main.cpp">
+    <ClCompile Include="src\debug_udp_main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\KabelRobotSim\src\logic.cpp" />
-    <ClCompile Include="..\..\KabelRobotSim\src\main.cpp">
+    <ClCompile Include="src\logic.cpp" />
+    <ClCompile Include="src\main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\KabelRobotSim\src\robot.cpp" />
+    <ClCompile Include="src\robot.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -125,7 +125,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\KabelRobotSim\include; D:\SFML-2.6.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include; D:\SFML-2.6.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
