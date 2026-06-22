@@ -1,4 +1,9 @@
 #pragma once
+
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+
 #include <cmath>
 #include <string>
 #include <cstdlib>  // abs
